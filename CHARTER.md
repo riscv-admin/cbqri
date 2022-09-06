@@ -1,37 +1,17 @@
-# {{ New Group Name }} {{ New Group Type }} Charter
+# Cache and Memory Control QoS Register Interface (CMQRI) Task Group Charter
 
-## Directions for creating a charter
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+The CMQRI Task Group shall develop a memory-mapped register interface to cache and memory controllers for:
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+1. Configuring cache capacity allocation
+2. Configuring memory bandwidth allocation
+3. Monitoring cache occupancy statistics\n4.Monitoring memory bandwidth usage
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+The CMQRI specification shall complement the QoS Identifiers extension proposal that defines the sqoscfg CSR to associate a resource-control-ID (RCID) and a monitoring-counter-ID (MCID) with software execution on hart.
 
-In the next section is a raw template.  Delete the section header and substitute appropriate text in for [ALL CAPS ITEMS AS DESCRIBED].
+The CMQRI specification shall not prescribe:
 
-**Delete this whole section when done.**
+- The level of QoS in the system
+- Methods for resource usage metering or enforcement of allocated resource limits
+- Behavior of components in the system that choose not to implement CMQRI
 
-## Raw template
-
-The {{ New Group Name }} {{ New Group Type }} will [OVERALL MISSION STATEMENT in 2-3 
-SENTENCES]
-
-[THIS PARAGRAPH IS OPTIONAL]
-The [TERM 1] IS [DEFINITION 1].  [EXPLANATION  OF IMPORTANCE OF TERM 1]. [MORE TERMS AND DEFINITIONS AS NEEDED]
-
-[BACKGROUND INFORMATION ABOUT RELEVANCE OF GROUP/TECHNOLOGY]
-
-The {{ New Group Name }} {{ New Group Type }} will [DELIVER SOMETHING] [WITH THESE ATTRIBUTES]:
-
- - [ATTRIBUTE 1]
- - [ATTRIBUTE 2]
- - [... AS NEEDED]
-
-[THIS PARAGRAPH AND LIST ARE OPTIONAL, ESPECIALLY IF THE LIST IS EMPTY]
-The following items are presently not planned to be delivered as part of this work, but may be considered in future versions:
-
- 1. [FEATURE 1]
- 1. [FEATURE 2]
- 1. [... AS NEEDED]
-
-To achieve its goals, the {{ New Group Name }} {{ New Group Type }}, will interact with the following groups: [GROUP NAME 1] [GROUP TYPE 1], [GROUP NAME 2] [GROUP TYPE 2], [...] and [GROUP NAME N] [GROUP TYPE N]. 
+The CMQRI TG shall validate its specification by prototyping the behavior using QEMU and demonstrate integration with Linux resource control framework with CMQRI.
